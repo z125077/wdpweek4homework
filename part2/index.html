@@ -4,100 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f4f4f4;
-      color: #333;
-      max-width: 600px;
-      margin: auto;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    .quiz-box {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    #question-count {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 1rem;
-      text-align: right;
-    }
-    #question {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-    .option {
-      display: block;
-      margin: 0.5rem 0;
-      padding: 0.8rem;
-      background: #f8f9fa;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .option:hover {
-      background: #e9ecef;
-    }
-    button {
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #2980b9;
-    }
-    button:disabled {
-      background-color: #95a5a6;
-      cursor: not-allowed;
-    }
-    #result {
-      margin-top: 2rem;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1.2rem;
-    }
-    .progress-container {
-      width: 100%;
-      background-color: #f1f1f1;
-      border-radius: 5px;
-      margin-bottom: 1rem;
-    }
-    .progress-bar {
-      height: 10px;
-      background-color: #4CAF50;
-      border-radius: 5px;
-      width: 0%;
-      transition: width 0.3s;
-    }
-    .correct {
-      background-color: #a4edba !important;
-    }
-    .incorrect {
-      background-color: #f5a3a3 !important;
-    }
-    .timer {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: #e74c3c;
-      font-weight: bold;
-    }
-  </style>
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: #f4f4f4;
+    color: #333;
+    max-width: 600px;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  .quiz-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  #question-count {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+  #question {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+  }
+  .option {
+    display: block;
+    margin: 0.7rem 0;
+    padding: 1rem;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .option:hover {
+    background: #e9ecef;
+    border-color: #3498db;
+    color: #000;
+  }
+  button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+  button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  #result {
+    margin-top: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .progress-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  .progress-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.3s;
+  }
+  .correct {
+    background-color: #a4edba !important;
+  }
+  .incorrect {
+    background-color: #f5a3a3 !important;
+  }
+  .timer {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e74c3c;
+    font-weight: bold;
+  }
+</style>
 </head>
 <body>
 
